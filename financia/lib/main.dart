@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'views/splash_screen.dart';
 import 'views/onboarding_screen.dart';
+import 'views/login_screen.dart';
+import 'views/signup_screen.dart';
+import 'views/dashboard_screen.dart';
 
 void main() {
   runApp(const FinancyApp());
@@ -21,15 +24,11 @@ class FinancyApp extends StatelessWidget {
       // Define routes for navigation
       initialRoute: '/',
       routes: {
-        '/': (context) => const SplashScreen(), // Splash screen
-        '/onboarding': (context) => OnboardingScreen(), // Onboarding screen
-        '/signup': (context) => Scaffold(
-            body: Center(
-                child:
-                    Text('Sign Up Screen'))), // Placeholder for Sign Up screen
-        '/login': (context) => Scaffold(
-            body: Center(
-                child: Text('Login Screen'))), // Placeholder for Login screen
+        '/': (context) => const SplashScreen(),
+        '/onboarding': (context) => OnboardingScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/dashboard': (context) => const DashboardScreen(),
       },
     );
   }
